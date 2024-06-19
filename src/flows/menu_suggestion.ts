@@ -10,7 +10,7 @@ const mm = "🔴 menuSuggestionFlow";
     inputSchema: z.string(),
     outputSchema: z.string(),
   },
-  async (subject) => {
+  async (subject: string) => {
     console.log(`${mm} Running menu suggestion flow for ${subject}`);
     const llmResponse = await generate({
       prompt: `Suggest an item for the menu of a ${subject} themed restaurant`,
